@@ -1,0 +1,116 @@
+.profile {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 500px) 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &--container {
+    }
+  }
+
+  &__posts {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  &__profiles--body {
+    grid-template-columns: minmax(300px, 400px)  1fr;
+
+    .profile__post {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__options {
+    margin: 20px 0;
+
+    &--container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &--body {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-white);
+      transition: all 0.3s ease-in;
+      margin: 0;
+      font-family: var(--primary-font);
+      font-size: 15px;
+      color: var(--color-main);
+      padding: 0 10px;
+      text-decoration: none !important;
+      border: 1px solid;
+      border-color: var(--color-grey-border);
+
+      &:hover {
+        background: var(--color-primary);
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .profile {
+    &__body {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
+}
+
+/* Medium devices */
+@media only screen and (min-width: 768px) {
+  .profile {
+    &__body {
+      grid-template-columns: minmax(250px, 300px) 1fr;
+      grid-template-rows: auto;
+
+      &--container {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+/* Large devices */
+@media only screen and (min-width: 992px) {
+  .profile {
+    &__body {
+      grid-template-columns: minmax(300px, 400px) 1fr;
+
+      &--container {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+/* Extra large devices */
+@media only screen and (min-width: 1200px) {
+  .profile {
+    &__body {
+      grid-template-columns: minmax(300px, 400px) 1fr;
+    }
+
+    &__posts {
+      grid-template-columns: 1fr minmax(300px, 400px);
+    }
+  }
+}

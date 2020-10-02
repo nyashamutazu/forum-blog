@@ -1,0 +1,41 @@
+.tag {
+  &__container {
+    padding: 20px 0;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__list {
+      flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+    border-bottom-color: var(--color-grey-border);
+    box-shadow: var(--shadow-light);
+  }
+
+  &__item {
+    list-style: none;
+    padding: 10px 15px;
+
+    &.active {
+      border-bottom: 3px solid;
+      border-bottom-color: var(--color-primary);  
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    padding: 20px 0;
+    color: var(--color-main);
+
+  }
+
+}

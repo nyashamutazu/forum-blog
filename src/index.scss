@@ -1,0 +1,34 @@
+// Shared
+@import "./sass/shared/app";
+@import "./sass/shared/article-list";
+@import "./sass/shared/article-preview";
+@import "./sass/shared/editor";
+@import "./sass/shared/header";
+@import "./sass/shared/list-errors";
+@import "./sass/shared/list-pagination";
+@import "./sass/shared/login";
+@import "./sass/shared/profile-likes";
+@import "./sass/shared/profile";
+@import "./sass/shared/search";
+@import "./sass/shared/settings";
+
+// Components 
+@import "./sass/components/base";
+@import "./sass/components/icons";
+@import "./sass/components/layout";
+@import "./sass/components/typography";
+@import "./sass/components/variables";
+@import "./sass/components/auth";
+@import "./sass/components/form";
+
+// Components UI 
+@import "./components/UI/sass/index";
+
+// Components Article 
+@import "./components/Article/sass/index";
+
+// Components Home 
+@import "./components/Home/sass/index";
+
+// Components Profile
+@import "./components/Profile/sass/index";

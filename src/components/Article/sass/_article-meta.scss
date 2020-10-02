@@ -1,0 +1,50 @@
+.articlemeta {
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 0 25px;
+        padding: 0 0 25px;
+        border-bottom: 1px solid;
+        border-bottom-color: var(--color-grey-border);
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+        &--img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            flex: 0 0 50px;
+        }
+
+        &--details {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
+        }
+
+        &--title {
+            padding: 0;
+            margin: 0;
+            font-family: var(--primary-font);
+            color: var(--color-main);
+            font-size: 15px;
+        }
+
+        &--bio {
+            padding: 0;
+            margin: 0;
+            font-family: var(--secondary-font);
+            color: var(--color-light);
+            font-size: 12px;
+        }
+    }
+}

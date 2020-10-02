@@ -1,0 +1,21 @@
+.delete__button {
+  padding: 0;
+  margin: 5px 0 0;
+  border: 1px solid;
+  border-color: var(--color-warn-dark);
+  color: var(--color-warn-dark);
+  font-family: var(--secondary-font);
+  font-size: 13px;
+  box-shadow: var(--shadow-light);
+  border-radius: 7px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background: var(--color-warn-light);
+    border-color: var(--color-warn-light);
+    box-shadow: var(--shadow-dark);
+    color: #fff;
+  }
+}

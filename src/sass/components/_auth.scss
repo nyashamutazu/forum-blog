@@ -1,0 +1,26 @@
+.auth {
+  &__login {
+  }
+
+  &__signup {
+  }
+
+  &__container {
+  }
+
+  &__head {
+    &--text {
+      padding: 20px 0;
+      color: var(--color-white);
+    }
+  }
+
+  &__heading {
+    color: var(--color-white);
+  }
+
+  &__details {
+    &--text {
+    }
+  }
+}

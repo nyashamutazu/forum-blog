@@ -1,0 +1,196 @@
+.article__preview {
+  padding: 20px;
+  box-shadow: var(--shadow-light);
+  background: #fff;
+  border: 1px solid;
+  display: flex;
+  border-color: var(--color-grey-border);
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    border-bottom-color: var(--color-grey-border);
+  }
+
+  &--user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+
+    &--img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      flex: 0 0 50px;
+    }
+
+    &--details {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+
+    &--title {
+      padding: 0;
+      margin: 0;
+      font-family: var(--primary-font);
+      color: var(--color-main);
+      font-size: 15px;
+    }
+
+    &--bio {
+      padding: 0;
+      margin: 0;
+      font-family: var(--secondary-font);
+      color: var(--color-light);
+      font-size: 12px;
+    }
+  }
+
+  &--created {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    &--date {
+      color: var(--color-light);
+      font-size: 12px;
+    }
+  }
+
+  &--body {
+    display: block;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid;
+    border-bottom-color: var(--color-grey-border);
+    text-decoration: none;
+    flex: 1;
+  }
+
+  &--content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+    border: 1px solid;
+    border-color: var(--color-grey-border);
+    height: 100%;
+    flex: 1;
+
+    &--image {
+      min-width: 200px;
+      max-width: 400px;
+      flex-basis: auto; /* default value */
+      flex-grow: 1;
+      min-height: 300px;
+      max-height: 500px;
+      height: 100%;
+    }
+
+    &--body {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    &--title {
+      text-align: left;
+      padding: 0;
+      margin: 0 0 10px;
+      font-family: var(--primary-font);
+      color: var(--color-main);
+      font-size: 15px;
+    }
+
+    &--text {
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      font-family: var(--secondary-font);
+      color: var(--color-light);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+  &--actions {
+    margin: 0 0 10px;
+    width: 100%;
+
+    &--container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+
+    &--text {
+      padding: 8px 0 0;
+      margin: 0 0 0 10px;
+      font-family: var(--secondary-font);
+      color: var(--color-light);
+      font-size: 15px;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &--footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &--container {
+      display: flex;
+      align-items: center;
+      border: 1px solid;
+      border-color: var(--color-grey-border);
+      padding: 8px;
+      width: 100%;
+    }
+
+    &--user--text {
+      margin: 0 0 0 10px;
+      padding: 0;
+      font-family: var(--secondary-font);
+      color: var(--color-light);
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {...}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}

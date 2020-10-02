@@ -1,0 +1,210 @@
+.btn {
+  border-radius: 3px;
+  box-shadow: var(--shadow-light);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  border: none;
+  font-weight: unset;
+  font-family: var(--secondary-font);
+  height: 33px;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0 20px;
+  white-space: nowrap;
+
+  &:hover {
+    .icon {
+      &__primary {
+        fill: #fff;
+      }
+    }
+  }
+
+  .icon {
+    fill: #fff;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    padding: 0;
+    margin-right: 4px;
+
+    &__primary {
+      fill: var(--color-primary);
+    }
+  }
+
+  &__primary,
+  &__primary--center {
+    box-shadow: none;
+    background: var(--color-primary);
+    color: #fff;
+
+    &:hover {
+      background: var(--color-primary-dark);
+    }
+
+    &--center {
+      margin: auto;
+      margin-top: 30px;
+    }
+  }
+
+  &__secondary,
+  &__secondary--long {
+    background: transparent;
+    color: var(--color-primary-dark);
+    border: 1px solid;
+    border-color: var(--color-primary-dark);
+
+    &--long {
+      width: 100%;
+      max-width: 300px;
+      margin: 30px auto;
+    }
+
+    &:hover {
+      background: var(--color-primary-dark);
+      color: #fff;
+    }
+  }
+
+  &__tertiary {
+    color: var(--color-primary);
+    border-radius: 50px;
+    border: 1px solid;
+    border-color: var(--color-primary);
+    height: 28px;
+    padding: 0 25px;
+
+    &:hover {
+      background: var(--color-primary-dark);
+      color: #fff;
+      border-color: var(--color-primary-dark);
+    }
+  }
+
+  &__warn {
+    border-color: var(--color-warn);
+    color: var(--color-warn) !important;
+    background: #fff;
+
+    &:hover {
+      background: var(--color-warn-light);
+    }
+  }
+
+  &:hover {
+    box-shadow: --shawdow-dark;
+  }
+
+  &__follow {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+
+    .icon {
+      fill: var(--color-secondary);
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      background: var(--color-secondary-light);
+      color: #fff !important;
+
+      .icon {
+        fill: #fff;
+      }
+    }
+
+    &.btn {
+      &__not--followed {
+      }
+
+      &__followed {
+      }
+    }
+  }
+
+  &__settings {
+    border-color: var(--color-grey-light);
+    padding: 9px 8px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-grey-background);
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s;
+
+    &:hover {
+      background: var(--color-grey-background-dark);
+      box-shadow: var(--shadow-dark);
+      border-color: var(--color-grey-border);
+
+      .icon {
+        fill: grey;
+      }
+    }
+
+    .icon {
+      fill: grey;
+      padding: 0;
+      margin: 0;
+      transition: all 0.3s;
+    }
+  }
+
+  &__like {
+    border-color: var(--color-grey-light);
+    box-shadow: var(--shadow-light);
+    margin: 0;
+    color: var(--color-secondary);
+    display: flex;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      .icon {
+        fill: var(--color-secondary);
+      }
+    }
+
+    .icon {
+      fill: grey;
+      padding: 0;
+      margin: 0;
+    }
+
+    &.disabled {
+    }
+
+    &.btn {
+      &__liked {
+        border-color: var(--color-secondary);
+        color: #fff;
+        box-shadow: var(--shadow-light);
+
+        .icon {
+          fill: var(--color-secondary);
+        }
+      }
+
+      &__not--liked {
+        background: transparent;
+      }
+    }
+  }
+
+  &__text {
+    font-family: var(--secondary-font);
+  }
+}

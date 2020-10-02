@@ -1,0 +1,74 @@
+.Spinner {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  &__text {
+    padding: 20px 0 0;
+    margin: auto;
+    font-family: var(--primary-font);
+    color: var(--color-main);
+    font-size: 15px;
+  }
+
+  &__link {
+    padding: 10px 0 0;
+
+    margin: 0;
+    font-family: var(--secondary-font);
+    color: var(--color-primary);
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+.Spinner div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.Spinner div:nth-child(1) {
+  left: 8px;
+  animation: Spinner1 0.6s infinite;
+}
+.Spinner div:nth-child(2) {
+  left: 8px;
+  animation: Spinner2 0.6s infinite;
+}
+.Spinner div:nth-child(3) {
+  left: 32px;
+  animation: Spinner2 0.6s infinite;
+}
+.Spinner div:nth-child(4) {
+  left: 56px;
+  animation: Spinner3 0.6s infinite;
+}
+@keyframes Spinner1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes Spinner3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes Spinner2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

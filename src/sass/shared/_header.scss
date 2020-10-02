@@ -1,0 +1,243 @@
+:root {
+  --nav-size: 60px;
+  --speed: 0.3s;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: var(--shadow-light);
+  height: var(--nav-size);
+
+  .container {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    &--img {
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--embeded {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--input {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: auto;
+      max-width: 500px;
+      padding: 0 30px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    fill: #fff;
+    padding: 3px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-primary-light);
+      box-shadow: var(--shadow-dark);
+    }
+  }
+}
+
+.search__dropdown {
+  right: 30px !important;
+  left: 30px !important;
+  max-width: 480px !important;
+}
+
+.dropdown {
+  position: absolute;
+  top: 58px;
+  right: 20px;
+  width: 100%;
+  max-width: 280px;
+  background: #fff;
+  border: var(--border);
+  border-radius: 0px;
+  box-shadow: var(--shadow-dark);
+  padding: 10px;
+  overflow: hidden;
+  transition: all var(--speed) ease;
+
+  &__search {
+    padding: 10px 0;
+    height: 35px;
+
+    &.dropdown__item {
+      height: unset;
+    }
+
+    &:hover {
+      background: transparent !important;
+    }
+
+    .search {
+      height: 100%;
+      width: 100%;
+
+      &__controller {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+      }
+
+      &__input {
+        height: 40px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    max-width: 260px;
+    width: 100%;
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--shadow-light);
+    border-radius: 0px;
+    padding: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  &__primary {
+    &-enter {
+      position: absolute;
+      transform: translateX(-110%);
+      &-active {
+        transform: translate(0%);
+        transition: all var(--speed) ease;
+      }
+    }
+
+    &-exit {
+      position: absolute;
+      &-active {
+        transition: all var(--speed) ease;
+        transform: translateX(-110%);
+      }
+    }
+  }
+
+  &__secondary {
+    &-enter {
+      transform: translateX(110%);
+      &-active {
+        transform: translate(0%);
+        transition: all var(--speed) ease;
+      }
+    }
+
+    &-exit {
+      &-active {
+        transition: all var(--speed) ease;
+        transform: translateX(110%);
+      }
+    }
+  }
+
+  &__item {
+    height: 30px;
+    font-size: 15px;
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    color: var(--color-main);
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    &.danger {
+      color: var(--color-warn-dark);
+      &:hover {
+        background: var(--color-warn-dark);
+        color: #fff;
+      }
+    }
+  }
+
+  &__title {
+    font-family: var(--primary-font);
+    background: var(--color-grey-light);
+
+    &:hover {
+      background: var(--color-main);
+      color: #fff;
+      padding-left: 20px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    &__item {
+      &--input {
+        display: none;
+      }
+    }
+  }
+}

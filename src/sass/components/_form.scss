@@ -1,0 +1,220 @@
+.form {
+  padding: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-light);
+  background: var(--color-white);
+  max-width: 600px;
+  margin: auto;
+
+  &__login {
+    .form {
+      &__head {
+        background: var(--color-secondary-dark);
+      }
+
+      &__container {
+        background: var(--color-secondary);
+      }
+    }
+  }
+
+  &__signup {
+    .form {
+      &__head {
+        background: var(--color-third-dark);
+      }
+
+      &__container {
+        background: var(--color-third);
+      }
+    }
+  }
+
+  &__settings {
+    justify-content: flex-start;
+    width: 100%;
+
+    &--controller {
+      flex: 1;
+      margin: 10px 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-bottom: 10px;
+    }
+
+    &--img {
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      border: 5px solid;
+      border-color: var(--color-primary);
+      transition: all 0.3s ease-in;
+      cursor: pointer;
+      margin: auto;
+
+      &:hover {
+        border-color: var(--color-primary-light);
+      }
+
+      &--img {
+        display: block;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+
+    &--title {
+      padding: 0 0 5px;
+      margin: 0;
+      font-family: var(--primary-font);
+      color: var(--color-main);
+      font-size: 15px;
+      flex: 0 0 100%;
+      text-align: left;
+    }
+
+    &--text {
+      padding: 10px 0 0;
+      margin: 0;
+      font-family: var(--secondary-font);
+      color: var(--color-icon);
+      font-size: 12px;
+      flex: 0 0 100%;
+      text-align: left;
+    }
+
+    &--input,
+    &--textarea {
+      flex: 1;
+      background: transparent;
+      padding: 5px 10px;
+      min-height: 30px;
+      border: none;
+      border: 1px solid;
+      border-color: var(--color-grey-border);
+      outline: none;
+      font-family: var(--secondary-font);
+
+      &::placeholder {
+        font-family: var(--secondary-font);
+        font-size: 15px;
+        line-height: 1.6;
+        letter-spacing: 1;
+      }
+
+      &:focus {
+        box-shadow: var(--shadow-light);
+        outline: none;
+        border-color: var(--color-primary);
+      }
+    }
+
+    &--textarea {
+      min-height: 50px;
+      padding: 5px 10px;
+    }
+  }
+
+  &__break {
+    border-bottom: 2px solid;
+    border-bottom-color: var(--color-main);
+    padding: 30px 0;
+    width: 100%;
+  }
+
+  &__head {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  &__controller {
+    flex: 1;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__input {
+    flex: 1;
+    background: transparent;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1.5px solid;
+    border-bottom-color: var(--color-white);
+    margin: 0 40px;
+
+    &::placeholder {
+      margin: 10px;
+      font-family: var(--secondary-font);
+      color: var(--color-white);
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: 1;
+    }
+  }
+
+  &__icon {
+    color: var(--color-primary);
+  }
+
+  &__link {
+    margin-left: 40px;
+    color: var(--color-white);
+  }
+
+  &__checkbox {
+    margin-left: 40px;
+  }
+
+  &__terms {
+    padding: 0;
+    margin: 0;
+    font-family: var(--secondary-font);
+    color: var(--color-white);
+    font-size: 12px;
+    margin: 0 40px 0 10px;
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 0.8;
+  }
+
+  &__btn {
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    margin: 20px auto;
+    background: var(--color-white);
+    box-shadow: var(--shadow-light);
+    border: none;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-size: 18px;
+
+    &--login {
+      color: var(--color-secondary);
+    }
+
+    &--signup {
+      color: var(--color-third);
+    }
+  }
+}

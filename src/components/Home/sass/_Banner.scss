@@ -1,0 +1,28 @@
+.banner {
+  text-align: center !important;
+  margin: auto;
+  background: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
+    no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 80px 20px;
+  margin: 0;
+  box-shadow: var(--shadow-light);
+
+  &__heading {
+    padding: 10px;
+    margin: 10px;
+    font-family: var(--primary-font);
+    color: var(--color-main);
+    font-size: 40px !important;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    padding: 10px;
+    margin: 10px;
+    font-family: var(--secondary-font);
+    color: var(--color-main);
+    font-size: 12px;
+  }
+}

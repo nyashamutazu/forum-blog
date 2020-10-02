@@ -1,0 +1,16 @@
+.profile__list {
+  &--container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    list-style: none;
+    padding: 10px 10px;
+    box-shadow: var(--shadow-light);
+    background: #fff;
+    border: 1px solid;
+    border-color: var(--color-grey-border);
+    margin: 0;
+  }
+}

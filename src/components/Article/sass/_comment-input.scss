@@ -1,0 +1,131 @@
+.comment__input {
+  &--head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 25px 0 0;
+    border-top: 1px solid;
+    border-top-color: var(--color-grey-border);
+  }
+
+  &--user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+
+    &--img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      flex: 0 0 50px;
+    }
+
+    &--details {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+
+    &--title {
+      padding: 0;
+      margin: 0;
+      font-family: var(--primary-font);
+      color: var(--color-main);
+      font-size: 15px;
+    }
+
+    &--bio {
+      padding: 0;
+      margin: 0;
+      font-family: var(--secondary-font);
+      color: var(--color-light);
+      font-size: 12px;
+    }
+
+ 
+  }
+
+  &--form {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px 0 0;
+    border-bottom: 1px solid;
+    border-bottom-color: var(--color-grey-border);
+  }
+
+  &--controller {
+    display: flex;
+
+    &:first-of-type {
+      flex: 3;
+      justify-content: flex-start;
+    }
+
+    &:nth-of-type(2) {
+      flex: 1;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
+
+  &--input {
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    margin: 0;
+    font-family: var(--secondary-font);
+    color: var(--color-light);
+    font-size: 15px;
+    width: 100%;
+    resize: none;
+    height: 100%;
+    outline: none;
+
+    &::placeholder {
+      margin: 0;
+      font-family: var(--secondary-font);
+      color: var(--color-light);
+      font-size: 15px;
+    }
+  }
+
+  &--btn {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    font-family: var(--secondary-font);
+    color: var(--color-primary);
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &--comment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0 10px;
+    border-bottom: 1px solid;
+    border-bottom-color: var(--color-grey-border);
+
+    &--user {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+      &--img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        flex: 0 0 40px;
+      }
+    }
+  }
+}
