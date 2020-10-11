@@ -12,7 +12,7 @@ import agent from "../agent";
 import Home from "./Home/Home";
 import Login from "./Login";
 import SignUp from "./SignUp";
-// import { Editor } from "./Editor";
+import Editor  from "./Editor";
 import Article from "./Article/Article";
 // import { Settings } from "./Settings";
 // import { ProfileLikes } from "./ProfileLikes";
@@ -21,6 +21,10 @@ import { Settings } from "./Settings";
 import TermsAndConditions from "./Terms-and-Conditions";
 import ProfileFollowers from "./Profile/ProfileFollowers";
 import ProfileFollowing from "./Profile/ProfileFollowing";
+import { ProfileLikes } from "./Profile/ProfileLikes";
+import ProfilePreview from "./Profile/ProfilePreview";
+import { ProfilePreviewList } from "./Profile/Lists/ProfilePreviewList";
+import ProfileLists from "./Profile/Lists/ProfileLists";
 // import TermsAndConditions from "./Terms-and-Conditions";
 
 class App extends Component {
@@ -46,6 +50,9 @@ class App extends Component {
         <Header
           appName={this.props.appName}
           currentUser={this.props.currentUser}
+          searchedUsers={this.props.searchedUsers}
+          searchedArticles={this.props.searchedArticles}
+          searchedTrending={this.props.searchedTrending}
         />
         {!this.props.currentUser ? (
           <Switch>
@@ -61,20 +68,22 @@ class App extends Component {
           </Switch>
         ) : (
           <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/sign-up" component={SignUp} />
             <Route path="/article/:id" component={Article} />
-            <Route path="/settings" component={Settings} />
-            <Route path="/privacy-policy" component={TermsAndConditions} />
-            {/* <Route path="/editor" component={Editor} /> */}
-            {/* <Route path="/editor/:slug" component={Editor} /> */}
-            <Route path="/:username/followers" component={ProfileFollowers} />
-            <Route path="/:username/following" component={ProfileFollowing} />
-            <Route path="/:username/likes" component={Profile} />
-            <Route path="/:username/list" component={Profile} />
-            <Route path="/:username" component={Profile} />
+            <Route exact path="/settings" component={Settings} />
+            <Route exact path="/privacy-policy" component={TermsAndConditions} />
+            <Route exact path="/editor" component={Editor} />
+            <Route path="/editor/:slug" component={Editor} />
+            <Route exact path="/:username/followers" component={ProfileFollowers} />
+            <Route exact path="/:username/following" component={ProfileFollowing} />
+            <Route exact path="/:username/liked" component={ProfileLikes} />
+            <Route exact path="/:username/lists" component={ProfileLists} />
+            <Route path="/:username/lists/:slug" component={ProfilePreviewList} />
+            <Route exact path="/:username" component={Profile} />
             <Route path="/" component={Home} />
-            <Redirect to="/" />
+            <Redirect to="/404" />
+
           </Switch>
         )}
 
@@ -84,6 +93,9 @@ class App extends Component {
         <Header
           appName={this.props.appName}
           currentUser={this.props.currentUser}
+          searchedUsers={this.props.searchedUsers}
+          searchedArticles={this.props.searchedArticles}
+          searchedTrending={this.props.searchedTrending}
         />
       </div>
     );
@@ -92,6 +104,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
+    ...state.search,
     appLoaded: state.common.appLoaded,
     appName: state.common.appName,
     currentUser: state.common.currentUser,

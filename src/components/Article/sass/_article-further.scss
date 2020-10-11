@@ -1,8 +1,8 @@
 .article__further {
-  position: relative;
 
   &--container {
     position: relative;
+    z-index: 0;
   }
 
   &--button {

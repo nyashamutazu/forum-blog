@@ -10,19 +10,24 @@ import {
 import { updatedObject } from "../utility/utility";
 
 const initialState = {
-  articleSlug: "",
-  title: "",
-  description: "",
-  body: "",
+  article: {
+    slug: "on-location-ma-che-siete-venuti-a-fa-in-rome-pb0rqg",
+    imageUrl:
+      "https://nm-upload-example.s3.us-east-2.amazonaws.com/on-location-ma-che-siete-venuti-a-fa-in-rome-mys936.jpeg",
+    title: "ON LOCATION: MA CHE SIETE VENUTI A FÀ IN ROME",
+    description:
+      "There’s nothing fancy about the place. You enter into a tiny taproom with counter seating on one side and a small bar on the other. Together, the room seats 10 patrons. Behind the bar sits a row of a dozen copper-colored beer towers, each sporting a hand-written card with information about the beer being dispensed. A modest selection of bottled beers is on display in a refrigerated case mounted on the wall. During my visits, most of the bottles featured wild ales from Belgium and the United States. The ever-changing draft list is posted on a chalkboard on the opposite wall.",
+    body: `Beyond the bar area`,
+    tagList: ["alchol", "beer", "drinks"],
+  },
   tagInput: "",
-  tagList: "",
   inProgress: false,
   errors: null
 };
 
 const editorPageLoaded = (state, action) => {
   const updatedState = {
-    articleSlug: action.payload ? action.payload.article.slug : "",
+    slug: action.payload ? action.payload.article.slug : "",
     title: action.payload ? action.payload.article.title : "",
     description: action.payload ? action.payload.article.description : "",
     body: action.payload ? action.payload.article.body : "",

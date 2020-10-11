@@ -1,6 +1,7 @@
 import React from "react";
-import Spinner from "../UI/Spinner";
 import ProfilePreview from "./ProfilePreview";
+import Spinner from "../UI/Spinner";
+
 
 const ProfileList = props => {
   if (!props.profiles) {

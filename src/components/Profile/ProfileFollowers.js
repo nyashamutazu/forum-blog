@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { ProfileNavigation } from "./ProfileNavigation";
+import ProfileNavigation from "./ProfileNavigation";
 import { ProfileUser } from "./ProfileUser";
-import ProfileList from "./ProfileList";
+
 import { ProfileOptions } from "./Profile";
 import {
   FOLLOW_USER,
@@ -10,6 +10,7 @@ import {
   PROFILE_FOLLOWERS_PAGE_LOADED,
   PROFILE_FOLLOWERS_PAGE_UNLOADED
 } from "../../constants/actionTypes";
+import ProfileList from "./ProfileList";
 
 class ProfileFollowers extends Component {
   componentDidMount() {
@@ -20,8 +21,8 @@ class ProfileFollowers extends Component {
   render() {
     return (
       <div className="profile">
+          <ProfileNavigation currentUser={this.props.currentUser} profile={this.props.profile} />
         <div className="container profile__container">
-          <ProfileNavigation />
           <div className="profile__body">
             <div className="profile__body--container">
               <ProfileUser profile={this.props.profile} />
@@ -33,7 +34,7 @@ class ProfileFollowers extends Component {
               </div>
             </div>
             <div className="profile__posts">
-              <ProfileList title={'Following'} profiles={this.props.followers} />
+              <ProfileList title={'Followers'} profiles={this.props.followers} />
             </div>
           </div>
         </div>

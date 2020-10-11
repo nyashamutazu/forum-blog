@@ -8,15 +8,16 @@ import {
 } from "../../constants/actionTypes";
 import { ProfileOptions } from "./Profile";
 import { ProfileUser } from "./ProfileUser";
-import { ProfileNavigation } from "./ProfileNavigation";
+import ProfileNavigation from "./ProfileNavigation";
 import ProfileList from "./ProfileList";
 
 class ProfileFollowing extends Component {
   render() {
     return (
       <div className="profile">
+          <ProfileNavigation currentUser={this.props.currentUser} profile={this.props.profile}/>
+
         <div className="container profile__container">
-          <ProfileNavigation />
           <div className="profile__body profile__profiles--body">
             <div className="profile__body--container">
               <ProfileUser profile={this.props.profile} />

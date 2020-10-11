@@ -26,9 +26,9 @@ class SettingsForm extends Component {
       twitter: "",
       instagram: "",
       linkedIn: "",
-      youtube: '',
-      github: '',
-      codePen: ''
+      youtube: "",
+      github: "",
+      codePen: ""
     };
 
     this.updateState = field => ev => {
@@ -109,19 +109,24 @@ class SettingsForm extends Component {
             />
           </div>
           <div className="form__settings--controller">
-            <label className="form__settings--title">Username<span className="form__icon">*</span></label>
+            <label className="form__settings--title">
+              Username<span className="form__icon">*</span>
+            </label>
             <input
-              type="text"
               value={this.state.username}
               onChange={this.updateState("username")}
               className="form__settings--input"
+              type="text"
+              required
             />
             <p className="form__settings--text">
               Real names are important, so your viewers know who you are.
             </p>
           </div>
           <div className="form__settings--controller">
-            <label className="form__settings--title">Bio<span className="form__icon">*</span></label>
+            <label className="form__settings--title">
+              Bio<span className="form__icon">*</span>
+            </label>
             <textarea
               value={this.state.bio}
               onChange={this.updateState("bio")}
@@ -133,7 +138,9 @@ class SettingsForm extends Component {
             </p>
           </div>
           <div className="form__settings--controller">
-            <label className="form__settings--title">Email<span className="form__icon">*</span></label>
+            <label className="form__settings--title">
+              Email<span className="form__icon">*</span>
+            </label>
             <input
               type="text"
               value={this.state.email}
@@ -245,7 +252,7 @@ class SettingsForm extends Component {
               https://github.com/: username
             </p>
           </div>
-          <div className="form__settings--controller">
+          <div className="form__settings--corntroller">
             <label className="form__settings--title">CodePen</label>
             <input
               type="text"

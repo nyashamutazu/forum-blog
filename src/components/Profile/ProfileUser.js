@@ -19,10 +19,10 @@ export const ProfileUser = props => {
     flex: "0 0 300px"
   };
 
-  const navigateTo = (url) => {
+  const navigateTo = url => {
     window.location = `https://${url}`;
     return;
-  }
+  };
 
   return (
     <div className="profile__user">
@@ -44,34 +44,28 @@ export const ProfileUser = props => {
         </div>
         <div className="profile__user--body">
           <div className="profile__user--body--head">
-          <Link className="profile__user--body--container">
+            <Link
+              className="profile__user--body--container"
+              to={"/" + props.profile.username + "/following"}
+            >
               <p className="profile__user--title">{props.profile.followings}</p>
-              <p
-                to={"/" + props.profile.username + "/following"}
-                className="profile__user--text"
-              >
-                Following
-              </p>
+              <p className="profile__user--text">Following</p>
             </Link>
-            <Link className="profile__user--body--container">
+            <Link
+              className="profile__user--body--container"
+              to={"/" + props.profile.username + "/followers"}
+            >
               <p className="profile__user--title">{props.profile.followers}</p>
-              <p
-                to={"/" + props.profile.username + "/followers"}
-                className="profile__user--text"
-              >
-                Followers
-              </p>
+              <p className="profile__user--text">Followers</p>
             </Link>
-            <Link className="profile__user--body--container">
+            <Link
+              className="profile__user--body--container"
+              to={"/" + props.profile.username}
+            >
               <p className="profile__user--title">
                 {props.profile.articleCount}
               </p>
-              <p
-                to={"/" + props.profile.username}
-                className="profile__user--text"
-              >
-                Articles
-              </p>
+              <p className="profile__user--text">Articles</p>
             </Link>
           </div>
           <div className="profile__user--body--content">

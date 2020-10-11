@@ -8,11 +8,9 @@ import {
   PROFILE_PAGE_LOADED,
   PROFILE_PAGE_UNLOADED
 } from "../../constants/actionTypes";
-import { ProfileNavigation } from "./ProfileNavigation";
-import { ProfileSubNavigation } from "./ProfileSubNavigation";
-import ProfilePreview from "./ProfilePreview";
 import ProfileList from "./ProfileList";
 import { Link } from "react-router-dom";
+import ProfileNavigation from "./ProfileNavigation";
 
 class Profile extends Component {
   componentDidMount() {
@@ -23,8 +21,8 @@ class Profile extends Component {
   render() {
     return (
       <div className="profile">
+          <ProfileNavigation currentUser={this.props.currentUser} profile={this.props.profile}/>
         <div className="container profile__container">
-          <ProfileNavigation />
           <div className="profile__body">
             <div className="profile__body--container">
               <ProfileUser profile={this.props.profile} />

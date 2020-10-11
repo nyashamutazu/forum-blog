@@ -1,12 +1,13 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { connect } from "react-redux";
 
 const FollowProfile = props => {
-  const classesUpdated = props.profile.following ? 'btn__unfollow' : 'btn__follow';
+  const [value, setState] = useState(props.profile.following);
+  const classesUpdated = value ? 'btn__unfollow' : 'btn__follow';
   const clasess = ['btn', 'btn__tertiary', classesUpdated];
-  const follow = props.profile.following ? 'Unfollow' : 'Follow'
+  const follow = value ? 'Unfollow' : 'Follow'
   return(
-    <button className={clasess.join(' ')}>{follow}</button>
+    <button className={clasess.join(' ')} onClick={() => setState(!value)}>{follow}</button>
   );
 };
 

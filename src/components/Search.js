@@ -1,11 +1,24 @@
-import React from "react";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
-const Search = props => {
-  return (
-    <div>
-      
-    </div>
-  );
-};
+export class Search extends Component {
 
-export default Search;
+  render() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = (state) => ({
+  
+})
+
+const mapDispatchToProps = {
+  
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)

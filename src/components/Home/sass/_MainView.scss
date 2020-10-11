@@ -1,6 +1,6 @@
 .tag {
   &__container {
-    padding: 20px 0;
+    padding: 20px 0 10px;
   }
 
   &__toggle {
@@ -10,7 +10,7 @@
   }
 
   &__list {
-      flex: 1;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,11 +23,25 @@
 
   &__item {
     list-style: none;
-    padding: 10px 15px;
+    padding: 10px 8px 5px;
+    border-bottom: 3px solid;
+    border-bottom-color: transparent;
+    transition: all 0.3s ease-in;
 
     &.active {
-      border-bottom: 3px solid;
-      border-bottom-color: var(--color-primary);  
+      border-bottom-color: var(--color-primary);
+
+      .tag__link {
+        color: var(--color-light);
+      }
+    }
+
+    &:hover {
+      border-bottom-color: var(--color-primary-light);
+
+      .tag__link {
+        color: var(--color-light);
+      }
     }
   }
 
@@ -35,7 +49,37 @@
     text-decoration: none;
     padding: 20px 0;
     color: var(--color-main);
-
+    font-size: 12px;
+    font-family: var(--font-secondary);
+    transition: all 0.3s ease-in;
   }
+}
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .tag {
+    &__item {
+      padding: 10px 15px 5px;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

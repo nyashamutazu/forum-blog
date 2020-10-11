@@ -69,25 +69,30 @@ class Header extends Component {
     return (
       <nav className="navbar">
         <div className="container">
-            <Navbar currentUser>
-              <NavItem
-                logo={
-                  <img
-                    className="navbar__logo--img"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE61QeekQ-1yBTQoHT0AKyA8gIf8oykNZ7sg&usqp=CAU"
-                    alt="Logo"
-                  />
-                }
-              />
+          <Navbar currentUser={this.props.currentUser}>
+            <NavItem
+              logo={
+                <img
+                  className="navbar__logo--img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE61QeekQ-1yBTQoHT0AKyA8gIf8oykNZ7sg&usqp=CAU"
+                  alt="Logo"
+                />
+              }
+            />
 
-              <NavInput currentUser={this.props.currentUser} />
+            <NavInput
+              currentUser={this.props.currentUser}
+              searchedUsers={this.props.searchedUsers}
+              searchedArticles={this.props.searchedArticles}
+              searchedTrending={this.props.searchedTrending}
+            />
 
-              {this.props.currentUser ? (
-                <UserItem currentUser={this.props.currentUser} />
-              ) : (
-                <LoggedOutView />
-              )}
-            </Navbar>
+            {this.props.currentUser ? (
+              <UserItem currentUser={this.props.currentUser} />
+            ) : (
+              <LoggedOutView />
+            )}
+          </Navbar>
         </div>
       </nav>
     );
